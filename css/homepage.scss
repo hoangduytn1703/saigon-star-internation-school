@@ -1,0 +1,20 @@
+#home-page {
+  padding-top: 145px;
+
+  .banner {
+    background: red;
+    height: 835px;
+    width: 100%;
+  }
+
+  .content {
+    .bg-blue {
+      background: #00AEEF;
+    }
+   
+
+    &__inside {
+      padding: 56px 0;
+    }
+  }
+}

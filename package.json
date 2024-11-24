@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "bootstrap": "^5.3.3",
+    "express": "^4.21.1",
+    "jquery": "^3.7.1",
+    "sass": "^1.81.0"
+  },
+  "scripts": {
+    "build-css": "sass src/styles/main.scss src/styles/main.css src/styles/homepage.scss src/styles/homepage.css --watch"
+  }
+}
