@@ -1,0 +1,27 @@
+<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Phone-03" clip-path="url(#clip0_513_10943)">
+<g id="Group">
+<path id="Vector" d="M20 40C8.95868 40 0 31.0413 0 20C0 8.95868 8.95868 0 20 0C31.0413 0 40 8.95868 40 20C40 31.0413 31.0413 40 20 40Z" fill="#0F4C3B"/>
+<path id="Vector_2" d="M20 0.661157C30.6777 0.661157 39.3388 9.32231 39.3388 20C39.3388 30.6777 30.6777 39.3388 20 39.3388C9.32231 39.3388 0.661157 30.6777 0.661157 20C0.661157 9.32231 9.32231 0.661157 20 0.661157ZM20 0C8.95868 0 0 8.95868 0 20C0 31.0413 8.95868 40 20 40C31.0413 40 40 31.0413 40 20C40 8.95868 31.0413 0 20 0Z" fill="url(#paint0_linear_513_10943)"/>
+</g>
+</g>
+<defs>
+<linearGradient id="paint0_linear_513_10943" x1="9.60962e-06" y1="20" x2="40" y2="20" gradientUnits="userSpaceOnUse">
+<stop stop-color="#FBE89E"/>
+<stop offset="0.1857" stop-color="#E9D18A"/>
+<stop offset="0.542" stop-color="#CBA968"/>
+<stop offset="0.8259" stop-color="#B99154"/>
+<stop offset="1" stop-color="#B2884C"/>
+</linearGradient>
+<linearGradient id="paint1_linear_513_10943" x1="13.2989" y1="20.6494" x2="25.6857" y2="20.6494" gradientUnits="userSpaceOnUse">
+<stop stop-color="#FBE89E"/>
+<stop offset="0.1857" stop-color="#E9D18A"/>
+<stop offset="0.542" stop-color="#CBA968"/>
+<stop offset="0.8259" stop-color="#B99154"/>
+<stop offset="1" stop-color="#B2884C"/>
+</linearGradient>
+<clipPath id="clip0_513_10943">
+<rect width="40" height="40" fill="white"/>
+</clipPath>
+</defs>
+</svg>

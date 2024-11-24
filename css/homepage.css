@@ -1,0 +1,16 @@
+#home-page {
+  padding-top: 145px;
+}
+#home-page .banner {
+  background: red;
+  height: 835px;
+  width: 100%;
+}
+#home-page .content .bg-blue {
+  background: #00AEEF;
+}
+#home-page .content__inside {
+  padding: 56px 0;
+}
+
+/*# sourceMappingURL=homepage.css.map */
