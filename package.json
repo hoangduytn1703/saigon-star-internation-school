@@ -6,6 +6,6 @@
     "sass": "^1.81.0"
   },
   "scripts": {
-    "build-css": "sass src/styles/main.scss src/styles/main.css src/styles/homepage.scss src/styles/homepage.css --watch"
+    "build-css": "sass ./css/insides:./css/insides --watch"
   }
 }

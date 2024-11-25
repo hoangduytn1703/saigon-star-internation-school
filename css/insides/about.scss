@@ -1,15 +1,5 @@
 @import "template.css";
-
-:root {
-  --color54: #344054;
-  --color-white: #fff;
-  --color-white-fb: #FBFBFB;
-  --timeline-bg-color: linear-gradient(rgba(0, 82, 152, 0.9), rgba(0, 82, 152, 0.9));
-
-  @for $i from 1 through 60 {
-    --fz-#{$i}: #{$i}px;
-  }
-}
+@import "main.scss";
 
 #about {
   .content {
@@ -27,6 +17,11 @@
     h1 {
       font-weight: 700;
       font-size: var(--fz-40);
+
+      @media (max-width: 768px) {
+        font-size: var(--fz-30);
+      }
+
       line-height: 115%;
       text-align: center;
       letter-spacing: 0.0025em;
@@ -42,19 +37,13 @@
     h2,
     h3,
     h5 {
-      color: var(--color-blue);
-    }
-
-    h3,
-    h5 {
       font-size: var(--fz-24);
-      line-height: 120%;
-     
-      letter-spacing: 0.005em;
-     
       color: var(--color-blue);
-
+      line-height: 120%;
+      letter-spacing: 0.005em;
     }
+
+
 
     p {
       font-family: 'SVN-Gilroy', sans-serif;
@@ -74,6 +63,10 @@
 
     &__box {
       height: 170px;
+
+      @media (max-width: 767px) {
+        height: auto;
+      }
 
       /* Color/Light Blue */
       background: var(--color3);
@@ -130,6 +123,11 @@
         font-style: normal;
         font-weight: 700;
         font-size: var(--fz-40);
+
+        @media (max-width: 768px) {
+          font-size: var(--fz-30);
+        }
+
         line-height: 115%;
         /* identical to box height, or 46px */
         text-align: center;
@@ -189,23 +187,29 @@
           white-space: nowrap;
           cursor: grab;
           position: relative;
-           /* Tùy chỉnh thanh cuộn */
-            &::-webkit-scrollbar {
-              height: 12px; /* Chiều cao của thanh cuộn ngang */
-            }
 
-            &::-webkit-scrollbar-track {
-              background: #f1f1f1; /* Màu nền của track */
-            }
+          /* Tùy chỉnh thanh cuộn */
+          &::-webkit-scrollbar {
+            height: 12px;
+            /* Chiều cao của thanh cuộn ngang */
+          }
 
-            &::-webkit-scrollbar-thumb {
-              background: #888; /* Màu của thanh cuộn */
-              border-radius: 6px; /* Bo tròn góc của thanh cuộn */
-            }
+          &::-webkit-scrollbar-track {
+            background: var(--color-scrollbar-track);
+            /* Màu nền của track */
+          }
 
-            &::-webkit-scrollbar-thumb:hover {
-              background: #555; /* Màu của thanh cuộn khi hover */
-            }
+          &::-webkit-scrollbar-thumb {
+            background: var(--color-scrollbar-thumb);
+            /* Màu của thanh cuộn */
+            border-radius: 6px;
+            /* Bo tròn góc của thanh cuộn */
+          }
+
+          &::-webkit-scrollbar-thumb:hover {
+            background: var(--color-scrollbar-thumb-hover);
+            /* Màu của thanh cuộn khi hover */
+          }
 
         }
 
@@ -306,7 +310,7 @@
         }
 
         &-content {
-          font-size: 16px;
+          font-size: var(--fz-16);
           color: var(--color-white-fb);
           text-align: center;
           display: -webkit-box;
@@ -372,45 +376,164 @@
     }
 
   }
-  .campus-page{
-    &__box{
+
+  &.campus-page {
+    .campus-page__box {
       /* Rectangle 180 */
 
       height: 185px;
       width: 100%;
       padding-top: 46px;
-      // padding-left: 45px;
-      // padding-right: 45px;
       padding-bottom: 46px;
+      padding-left: 15px;
+      padding-right: 15px;
+
+      @media (max-width: 768px) {
+        height: auto;
+        padding-top: 20px;
+        padding-bottom: 20px;
+      }
+
       /* Color/Blue */
       background: var(--color-blue);
-      h1{
+
+      h1 {
         font-weight: 700;
-          font-size: var(--fz-40);
-          line-height: 115%;
-          /* or 46px */
-          text-align: center;
-          letter-spacing: 0.0025em;
-          /* Color/Gradient */
-          background: var(--bg-radian);
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-          background-clip: text;
-          text-fill-color: transparent;
-          display: inline-block;
-          text-transform: capitalize;
+        font-size: var(--fz-40);
+        margin-bottom: 0;
+        @media (max-width: 768px) {
+          font-size: var(--fz-30);
         }
 
+        line-height: 115%;
+        /* or 46px */
+        text-align: center;
+        letter-spacing: 0.0025em;
+        /* Color/Gradient */
+        background: var(--bg-radian);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+        display: inline-block;
+        text-transform: capitalize;
+      }
+
     }
-    
+
   }
-  .slider-nor.slider_banner {
-    img {
-      border-radius: 0 !important;
+
+  &.leadership-page {
+    .leadership__box {
+
+
+      /* Color/Light Blue */
+      background: var(--color3);
+      border-radius: 24px;
+
+      h3 {
+        font-size: var(--fz-30);
+        @media (max-width: 768px) {
+          font-size: var(--fz-26);
+        }
+
+        color: var(--color-white);
+        margin-bottom: 0;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 110%;
+        letter-spacing: 0.005em;
+
+      }
+
+      h4 {
+        font-size: var(--fz-20);
+        @media (max-width: 768px) {
+          font-size: var(--fz-18);
+        }
+
+        color: var(--colorFB);
+        margin-bottom: 0;
+      }
+
+      &--data {
+        p {
+          font-size: var(--fz-16);
+          font-weight: 400;
+          line-height: 140%;
+          text-align: justify;
+          letter-spacing: 0.005em;
+          color: var(--colorFB);
+        }
+      }
     }
-    
+
+    .leadership {
+      &__members {
+        .col-sm-4.col-6 {
+          margin-bottom: 14px;
+
+          &:nth-last-child(1) {
+            margin-bottom: 0;
+          }
+        }
+      }
+
+      &__name {
+        font-size: var(--fz-24);
+        @media (max-width: 768px) {
+          font-size: var(--fz-16);
+        }
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 13.5px 17px;
+        background: var(--color3);
+        border-radius: 0px 0px 16px 16px;
+        gap: 0px;
+
+        h3 {
+
+          font-size: var(--fz-20);
+          line-height: 130%;
+          text-align: center;
+          /* Color/White */
+          color: var(--colorFB);
+          flex: none;
+          order: 0;
+          align-self: stretch;
+          flex-grow: 0;
+          margin-bottom: 0px;
+        }
+
+        p {
+
+          font-weight: 400;
+          font-size: var(--fz-14);
+          line-height: 125%;
+          text-align: center;
+          letter-spacing: 0.0025em;
+          flex: none;
+          order: 1;
+          align-self: stretch;
+          flex-grow: 0;
+          color: var(--colorFB);
+          margin-bottom: 0;
+
+        }
+      }
+    }
   }
 }
+
+.slider-nor.slider_banner {
+  img {
+    border-radius: 0 !important;
+  }
+
+}
+
 
 @keyframes scrollTimeline {
   0% {

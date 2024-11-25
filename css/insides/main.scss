@@ -22,7 +22,21 @@
 	font-style: normal;
 	src: url("fonts/SVN-GilroyBold.ttf");
 }
-
+:root {
+	--color54: #344054;
+	--color-white: #fff;
+	--color-white-fb: #FBFBFB;
+	--color-neutral-01: #1F242C;
+	--timeline-bg-color: linear-gradient(rgba(0, 82, 152, 0.9), rgba(0, 82, 152, 0.9));
+  --color-scrollbar-track: #f1f1f1;
+	--color-scrollbar-thumb: #888;
+	--color-scrollbar-thumb-hover: #555;
+  --color-breadcrumb: #D7DBE2;
+	@for $i from 1 through 60 {
+	  --fz-#{$i}: #{$i}px;
+	}
+  }
+  
 	body {
 		font-family: 'SVN-Gilroy';
 		font-weight: normal;
@@ -35,14 +49,14 @@
 		font-family: 'SVN-Gilroy';
 		font-style: normal;
 		font-weight: 400;
-		font-size: 16px;
+		font-size: var(--fz-16);
 		line-height: 140%;
 		/* or 22px */
 		text-align: justify;
 		letter-spacing: 0.005em;
 
 		/* Neutral/Neutral01 */
-		color: #1F242C;
+		color: var(--color-neutral-01);
 
 
 	}
@@ -52,6 +66,9 @@
 		&__inside {
 			width: 100%;
 			height: 450px;
+			@media (max-width: 768px) {
+				height: 250px;
+			}
 			left: 0px;
 			background-position: center !important;
 			background-size: cover !important;
@@ -62,19 +79,19 @@
 		/* Group 153 */
 		width: 100%;
 		height: 60px;
-		background-color: #D7DBE2;
-		color: #005298;
+		background-color: var(--color-breadcrumb);
+		color: var(--color-blue);
 		margin-bottom: 0;
 
 		a {
 
 			font-weight: 700;
-			font-size: 14px;
+			font-size: var(--fz-14);
 			line-height: 15px;
 			align-items: center;
 			letter-spacing: 0.0125em;
 			text-transform: uppercase;
-			color: #005298;
+			color: var(--color-blue);
 			/* Inside auto layout */
 			flex: none;
 			order: 0;
@@ -83,8 +100,7 @@
 			margin-right: 30px;
 			position: relative;
 			&:hover{
-				color: linear-gradient(76.96deg, #FFDC7C 0%, #FEE8AC 14%, #E3EAD1 28%, #9AD7D7 42%, #61C7D8 56%, #9BBCDE 70%, #C9C5DE 86%, #EFB8CE 100%);;
-				// background: linear-gradient(76.96deg, #FFDC7C 0%, #FEE8AC 14%, #E3EAD1 28%, #9AD7D7 42%, #61C7D8 56%, #9BBCDE 70%, #C9C5DE 86%, #EFB8CE 100%);
+				color: var( --bg-radian);
 			}
 			&::after {
 				content: '';
@@ -107,7 +123,8 @@
 			text-decoration: none;
 		}
 		&:hover{
-			background: var(--bg-radian) !important;transition: var(--d-transition); color: var(--color-blue) !important;
+			background: var(--bg-radian) !important;transition: var(--d-transition); 
+      color: var(--color-blue) !important;
 			a{
 				color: var(--color-blue) !important;
 			}
@@ -126,25 +143,25 @@
 		@for $i from 0 through 125 {
 			.m#{$direction}-#{$i} {
 				@if $direction == 'x' {
-					margin-left: #{$i}px;
-					margin-right: #{$i}px;
+					margin-left: #{$i}px !important;
+					margin-right: #{$i}px !important;
 				} @else if $direction == 'y' {
-					margin-top: #{$i}px;
-					margin-bottom: #{$i}px;
+					margin-top: #{$i}px !important;
+					margin-bottom: #{$i}px !important;
 				} @else {
-					margin-#{if($direction == 't', 'top', if($direction == 'r', 'right', if($direction == 'b', 'bottom', 'left')))}: #{$i}px;
+					margin-#{if($direction == 't', 'top', if($direction == 'r', 'right', if($direction == 'b', 'bottom', 'left')))}: #{$i}px !important;
 				}
 			}
 
 			.p#{$direction}-#{$i} {
 				@if $direction == 'x' {
-					padding-left: #{$i}px;
-					padding-right: #{$i}px;
+					padding-left: #{$i}px !important;
+					padding-right: #{$i}px !important;
 				} @else if $direction == 'y' {
-					padding-top: #{$i}px;
-					padding-bottom: #{$i}px;
+					padding-top: #{$i}px !important;
+					padding-bottom: #{$i}px !important;
 				} @else {
-					padding-#{if($direction == 't', 'top', if($direction == 'r', 'right', if($direction == 'b', 'bottom', 'left')))}: #{$i}px;
+					padding-#{if($direction == 't', 'top', if($direction == 'r', 'right', if($direction == 'b', 'bottom', 'left')))}: #{$i}px !important;
 				}
 			}
 
@@ -152,25 +169,25 @@
 			@media (min-width: 1200px) { // lg
 				.m#{$direction}-lg-#{$i} {
 					@if $direction == 'x' {
-						margin-left: #{$i}px;
-						margin-right: #{$i}px;
+						margin-left: #{$i}px !important;
+						margin-right: #{$i}px !important;
 					} @else if $direction == 'y' {
-						margin-top: #{$i}px;
-						margin-bottom: #{$i}px;
+						margin-top: #{$i}px !important;
+						margin-bottom: #{$i}px !important;
 					} @else {
-						margin-#{if($direction == 't', 'top', if($direction == 'r', 'right', if($direction == 'b', 'bottom', 'left')))}: #{$i}px;
+						margin-#{if($direction == 't', 'top', if($direction == 'r', 'right', if($direction == 'b', 'bottom', 'left')))}: #{$i}px !important;
 					}
 				}
 
 				.p#{$direction}-lg-#{$i} {
 					@if $direction == 'x' {
-						padding-left: #{$i}px;
-						padding-right: #{$i}px;
+						padding-left: #{$i}px !important;
+						padding-right: #{$i}px !important;
 					} @else if $direction == 'y' {
-						padding-top: #{$i}px;
-						padding-bottom: #{$i}px;
+						padding-top: #{$i}px !important;
+						padding-bottom: #{$i}px !important;
 					} @else {
-						padding-#{if($direction == 't', 'top', if($direction == 'r', 'right', if($direction == 'b', 'bottom', 'left')))}: #{$i}px;
+						padding-#{if($direction == 't', 'top', if($direction == 'r', 'right', if($direction == 'b', 'bottom', 'left')))}: #{$i}px !important;
 					}
 				}
 			}
@@ -178,25 +195,25 @@
 			@media (min-width: 992px) and (max-width: 1199.98px) { // md
 				.m#{$direction}-md-#{$i} {
 					@if $direction == 'x' {
-						margin-left: #{$i}px;
-						margin-right: #{$i}px;
+						margin-left: #{$i}px !important;
+						margin-right: #{$i}px !important;
 					} @else if $direction == 'y' {
-						margin-top: #{$i}px;
-						margin-bottom: #{$i}px;
+						margin-top: #{$i}px !important;
+						margin-bottom: #{$i}px !important;
 					} @else {
-						margin-#{if($direction == 't', 'top', if($direction == 'r', 'right', if($direction == 'b', 'bottom', 'left')))}: #{$i}px;
+						margin-#{if($direction == 't', 'top', if($direction == 'r', 'right', if($direction == 'b', 'bottom', 'left')))}: #{$i}px !important;
 					}
 				}
 
 				.p#{$direction}-md-#{$i} {
 					@if $direction == 'x' {
-						padding-left: #{$i}px;
-						padding-right: #{$i}px;
+						padding-left: #{$i}px !important;
+						padding-right: #{$i}px !important;
 					} @else if $direction == 'y' {
-						padding-top: #{$i}px;
-						padding-bottom: #{$i}px;
+						padding-top: #{$i}px !important;
+						padding-bottom: #{$i}px !important;
 					} @else {
-						padding-#{if($direction == 't', 'top', if($direction == 'r', 'right', if($direction == 'b', 'bottom', 'left')))}: #{$i}px;
+						padding-#{if($direction == 't', 'top', if($direction == 'r', 'right', if($direction == 'b', 'bottom', 'left')))}: #{$i}px !important;
 					}
 				}
 			}
@@ -204,25 +221,25 @@
 			@media (min-width: 768px) and (max-width: 991.98px) { // sm
 				.m#{$direction}-sm-#{$i} {
 					@if $direction == 'x' {
-						margin-left: #{$i}px;
-						margin-right: #{$i}px;
+						margin-left: #{$i}px !important;
+						margin-right: #{$i}px !important;
 					} @else if $direction == 'y' {
-						margin-top: #{$i}px;
-						margin-bottom: #{$i}px;
+						margin-top: #{$i}px !important;
+						margin-bottom: #{$i}px !important;
 					} @else {
-						margin-#{if($direction == 't', 'top', if($direction == 'r', 'right', if($direction == 'b', 'bottom', 'left')))}: #{$i}px;
+						margin-#{if($direction == 't', 'top', if($direction == 'r', 'right', if($direction == 'b', 'bottom', 'left')))}: #{$i}px !important;
 					}
 				}
 
 				.p#{$direction}-sm-#{$i} {
 					@if $direction == 'x' {
-						padding-left: #{$i}px;
-						padding-right: #{$i}px;
+						padding-left: #{$i}px !important;
+						padding-right: #{$i}px !important;
 					} @else if $direction == 'y' {
-						padding-top: #{$i}px;
-						padding-bottom: #{$i}px;
+						padding-top: #{$i}px !important;
+						padding-bottom: #{$i}px !important;
 					} @else {
-						padding-#{if($direction == 't', 'top', if($direction == 'r', 'right', if($direction == 'b', 'bottom', 'left')))}: #{$i}px;
+						padding-#{if($direction == 't', 'top', if($direction == 'r', 'right', if($direction == 'b', 'bottom', 'left')))}: #{$i}px !important;
 					}
 				}
 			}
@@ -230,25 +247,25 @@
 			@media (max-width: 767.98px) { // xs
 				.m#{$direction}-xs-#{$i} {
 					@if $direction == 'x' {
-						margin-left: #{$i}px;
-						margin-right: #{$i}px;
+						margin-left: #{$i}px !important;
+						margin-right: #{$i}px !important;
 					} @else if $direction == 'y' {
-						margin-top: #{$i}px;
-						margin-bottom: #{$i}px;
+						margin-top: #{$i}px !important;
+						margin-bottom: #{$i}px !important;
 					} @else {
-						margin-#{if($direction == 't', 'top', if($direction == 'r', 'right', if($direction == 'b', 'bottom', 'left')))}: #{$i}px;
+						margin-#{if($direction == 't', 'top', if($direction == 'r', 'right', if($direction == 'b', 'bottom', 'left')))}: #{$i}px !important;
 					}
 				}
 
 				.p#{$direction}-xs-#{$i} {
 					@if $direction == 'x' {
-						padding-left: #{$i}px;
-						padding-right: #{$i}px;
+						padding-left: #{$i}px !important;
+						padding-right: #{$i}px !important;
 					} @else if $direction == 'y' {
-						padding-top: #{$i}px;
-						padding-bottom: #{$i}px;
+						padding-top: #{$i}px !important;
+						padding-bottom: #{$i}px !important;
 					} @else {
-						padding-#{if($direction == 't', 'top', if($direction == 'r', 'right', if($direction == 'b', 'bottom', 'left')))}: #{$i}px;
+						padding-#{if($direction == 't', 'top', if($direction == 'r', 'right', if($direction == 'b', 'bottom', 'left')))}: #{$i}px !important;
 					}
 				}
 			}
