@@ -447,27 +447,29 @@ $('.animatedClick').click(function(){
 $(document.body).on('appear', '.animatedParent', function(e, $affected){
   var ele = $(this).find('.animated');
   var parent = $(this);
-  
 
-  if(parent.attr('data-sequence') != undefined){
-    
-    var firstId = $(this).find('.animated:first').attr('data-id');
-    var number = firstId;
-    var lastId = $(this).find('.animated:last').attr('data-id');
+  // Kiểm tra nếu phần tử có lớp animateOnce
+  if (!parent.hasClass('animateOnce') || !parent.hasClass('animatedOnce')) {
+    if(parent.attr('data-sequence') != undefined){
+      var firstId = $(this).find('.animated:first').attr('data-id');
+      var number = firstId;
+      var lastId = $(this).find('.animated:last').attr('data-id');
 
-    $(parent).find(".animated[data-id="+ number +"]").addClass('go');
-    number ++;
-    delay = Number(parent.attr('data-sequence'));
-
-    $.doTimeout(delay, function(){
       $(parent).find(".animated[data-id="+ number +"]").addClass('go');
-      ++number;
-      if(number <= lastId){return true;}
-    });
-  }else{
-    ele.addClass('go');
+      number ++;
+      delay = Number(parent.attr('data-sequence'));
+
+      $.doTimeout(delay, function(){
+        $(parent).find(".animated[data-id="+ number +"]").addClass('go');
+        ++number;
+        if(number <= lastId){return true;}
+      });
+    } else {
+      ele.addClass('go');
+    }
+    // Đánh dấu phần tử đã được animated
+    parent.addClass('animatedOnce');
   }
-  
 });
 
  $(document.body).on('disappear', '.animatedParent', function(e, $affected) {

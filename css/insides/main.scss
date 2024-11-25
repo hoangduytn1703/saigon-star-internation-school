@@ -123,7 +123,7 @@
 	}
 
 	@each $direction in (t, r, b, l, x, y) {
-		@for $i from 0 through 250 {
+		@for $i from 0 through 125 {
 			.m#{$direction}-#{$i} {
 				@if $direction == 'x' {
 					margin-left: #{$i}px;
@@ -145,6 +145,111 @@
 					padding-bottom: #{$i}px;
 				} @else {
 					padding-#{if($direction == 't', 'top', if($direction == 'r', 'right', if($direction == 'b', 'bottom', 'left')))}: #{$i}px;
+				}
+			}
+
+			// Responsive for lg, md, sm, xs
+			@media (min-width: 1200px) { // lg
+				.m#{$direction}-lg-#{$i} {
+					@if $direction == 'x' {
+						margin-left: #{$i}px;
+						margin-right: #{$i}px;
+					} @else if $direction == 'y' {
+						margin-top: #{$i}px;
+						margin-bottom: #{$i}px;
+					} @else {
+						margin-#{if($direction == 't', 'top', if($direction == 'r', 'right', if($direction == 'b', 'bottom', 'left')))}: #{$i}px;
+					}
+				}
+
+				.p#{$direction}-lg-#{$i} {
+					@if $direction == 'x' {
+						padding-left: #{$i}px;
+						padding-right: #{$i}px;
+					} @else if $direction == 'y' {
+						padding-top: #{$i}px;
+						padding-bottom: #{$i}px;
+					} @else {
+						padding-#{if($direction == 't', 'top', if($direction == 'r', 'right', if($direction == 'b', 'bottom', 'left')))}: #{$i}px;
+					}
+				}
+			}
+
+			@media (min-width: 992px) and (max-width: 1199.98px) { // md
+				.m#{$direction}-md-#{$i} {
+					@if $direction == 'x' {
+						margin-left: #{$i}px;
+						margin-right: #{$i}px;
+					} @else if $direction == 'y' {
+						margin-top: #{$i}px;
+						margin-bottom: #{$i}px;
+					} @else {
+						margin-#{if($direction == 't', 'top', if($direction == 'r', 'right', if($direction == 'b', 'bottom', 'left')))}: #{$i}px;
+					}
+				}
+
+				.p#{$direction}-md-#{$i} {
+					@if $direction == 'x' {
+						padding-left: #{$i}px;
+						padding-right: #{$i}px;
+					} @else if $direction == 'y' {
+						padding-top: #{$i}px;
+						padding-bottom: #{$i}px;
+					} @else {
+						padding-#{if($direction == 't', 'top', if($direction == 'r', 'right', if($direction == 'b', 'bottom', 'left')))}: #{$i}px;
+					}
+				}
+			}
+
+			@media (min-width: 768px) and (max-width: 991.98px) { // sm
+				.m#{$direction}-sm-#{$i} {
+					@if $direction == 'x' {
+						margin-left: #{$i}px;
+						margin-right: #{$i}px;
+					} @else if $direction == 'y' {
+						margin-top: #{$i}px;
+						margin-bottom: #{$i}px;
+					} @else {
+						margin-#{if($direction == 't', 'top', if($direction == 'r', 'right', if($direction == 'b', 'bottom', 'left')))}: #{$i}px;
+					}
+				}
+
+				.p#{$direction}-sm-#{$i} {
+					@if $direction == 'x' {
+						padding-left: #{$i}px;
+						padding-right: #{$i}px;
+					} @else if $direction == 'y' {
+						padding-top: #{$i}px;
+						padding-bottom: #{$i}px;
+					} @else {
+						padding-#{if($direction == 't', 'top', if($direction == 'r', 'right', if($direction == 'b', 'bottom', 'left')))}: #{$i}px;
+					}
+				}
+			}
+
+			@media (max-width: 767.98px) { // xs
+				.m#{$direction}-xs-#{$i} {
+					@if $direction == 'x' {
+						margin-left: #{$i}px;
+						margin-right: #{$i}px;
+					} @else if $direction == 'y' {
+						margin-top: #{$i}px;
+						margin-bottom: #{$i}px;
+					} @else {
+						margin-#{if($direction == 't', 'top', if($direction == 'r', 'right', if($direction == 'b', 'bottom', 'left')))}: #{$i}px;
+					}
+				}
+
+				.p#{$direction}-xs-#{$i} {
+					@if $direction == 'x' {
+						padding-left: #{$i}px;
+						padding-right: #{$i}px;
+					} @else if $direction == 'y' {
+						padding-top: #{$i}px;
+						padding-bottom: #{$i}px;
+					} @else {
+						padding-#{if($direction == 't', 'top', if($direction == 'r', 'right', if($direction == 'b', 'bottom', 'left')))}: #{$i}px;
+					}
 				}
 			}
 		}
