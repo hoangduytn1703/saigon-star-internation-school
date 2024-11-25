@@ -135,7 +135,7 @@ p {
   color: var(--color-blue);
   margin-bottom: 0;
 }
-.breadcrumb a {
+.breadcrumb a, .breadcrumb p {
   font-weight: 700;
   font-size: var(--fz-14);
   line-height: 15px;
@@ -151,10 +151,10 @@ p {
   margin-right: 30px;
   position: relative;
 }
-.breadcrumb a:hover {
+.breadcrumb a:hover, .breadcrumb p:hover {
   color: var(--bg-radian);
 }
-.breadcrumb a::after {
+.breadcrumb a::after, .breadcrumb p::after {
   content: "";
   width: 5.76px;
   height: 10px;
@@ -164,8 +164,12 @@ p {
   top: 50%;
   transform: translateY(-50%);
 }
-.breadcrumb a:last-child::after {
+.breadcrumb a:last-child::after, .breadcrumb p:last-child::after {
   display: none;
+}
+.breadcrumb p {
+  cursor: default;
+  margin-bottom: 0 !important;
 }
 
 .btn a {

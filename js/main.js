@@ -1,14 +1,29 @@
-// $(document).ready(function(){
-//     $('.timeline').slick({
-//         infinite: true,
-//         loop: true,
-//         slidesToShow: 5,
-//         slidesToScroll: 1,
-//         autoplay: true,
-//         autoplaySpeed: 2000, // Tốc độ cuộn chậm hơn
-//         speed: 1000, // Thời gian chuyển đổi giữa các slide
-//         cssEase: 'linear', // Hiệu ứng chuyển động mượt mà
-//         arrows: false,
- 
-//     });
-//   });
+$(document).ready(function(){
+  
+  $('.slider-teacher').slick({
+      infinite: true,
+      loop: false,
+      slidesToShow: 3,
+      slidesToScroll: 3,
+      autoplay: false,
+      autoplaySpeed: 500, 
+      speed: 500, 
+      cssEase: 'linear', 
+      arrows: true,
+      dots: true,
+      responsive: [
+          {
+              breakpoint: 767,
+              settings: {
+                  slidesToShow: 1,
+              }
+          },
+          {
+              breakpoint: 768,
+              settings: {
+                  slidesToShow: 2,
+              }
+          }
+      ]
+  });
+});

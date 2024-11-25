@@ -83,8 +83,7 @@
 		color: var(--color-blue);
 		margin-bottom: 0;
 
-		a {
-
+		a, p {
 			font-weight: 700;
 			font-size: var(--fz-14);
 			line-height: 15px;
@@ -116,6 +115,10 @@
 			&:last-child::after {
 				display: none;
 			}
+		}
+		p{
+			cursor: default;
+			margin-bottom: 0 !important;
 		}
 	}
 	.btn{
