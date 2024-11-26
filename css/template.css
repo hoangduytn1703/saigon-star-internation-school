@@ -37,7 +37,9 @@ body {font-family: 'SVN-Gilroy', sans-serif;  margin: 0px; padding: 0px; font-si
   --color3:#006AC5;
   --colorFB: #FBFBFB;
   --color54: #344054;
-  --fz-40: 40px;
+  --color00: #000000;
+  --fz-40: 40px;  
+  --fz-24: 24px;
   --fz-20: 20px;
   --fz-16: 16px;
   --fz-14: 14px;
@@ -46,6 +48,7 @@ body {font-family: 'SVN-Gilroy', sans-serif;  margin: 0px; padding: 0px; font-si
 
  --bg-radian:linear-gradient(76.96deg, #FFDC7C 0%, #FEE8AC 14%, #E3EAD1 28%, #9AD7D7 42%, #61C7D8 56%, #9BBCDE 70%, #C9C5DE 86%, #EFB8CE 100%);
  --text-radian: linear-gradient(76.96deg, #FFDC7C 0%, #FEE8AC 14%, #E3EAD1 28%, #9AD7D7 42%, #61C7D8 56%, #9BBCDE 70%, #C9C5DE 86%, #EFB8CE 100%);
+ --bor-radian:linear-gradient(76.96deg, #FFDC7C 0%, #FEE8AC 14%, #E3EAD1 28%, #9AD7D7 42%, #61C7D8 56%, #9BBCDE 70%, #C9C5DE 86%, #EFB8CE 100%) 1;
  --d-padding-none:0px;
  --d-padding:  var(--bs-gutter-x,.70rem); 
  --d-marb60:60px;
@@ -63,7 +66,7 @@ body {font-family: 'SVN-Gilroy', sans-serif;  margin: 0px; padding: 0px; font-si
 
 
 /* WordPress Core */
-a{transition: var(--d-transition3);  text-decoration: none; }
+a{transition: var(--d-transition3);  text-decoration: none !important; }
 .aligncenter,div.aligncenter { display: block; margin: 5px auto 1em auto; }
 .alignright,a img.alignright { float: right; margin: 5px 0 20px 20px; }
 .alignleft,a img.alignleft { float: left; margin: 5px 20px 20px 0; }
@@ -129,8 +132,18 @@ a img.aligncenter { display: block; margin-left: auto; margin-right: auto; }
     50% { background-position: 400% 0; }
     100% { background-position: 0 0; }
 }
+.border-radian-line{
+      border-radius: 5px;  
+  display: inline-block;
+}
 
-
+    .border-radian-line a,.des-event .border-radian-line a{font-weight: 700; font-size: var(--fz-14);  
+        text-transform: uppercase; display: inline-block; position: relative; z-index: 5;
+        border-image: var(--bor-radian);
+      border-width: 1px;padding: 5px 10px;
+      border-style: solid; border-color: transparent;
+    }
+    .border-radian-line a:hover{border-color: var(--color2); color: var(--color-blue); border-image: none;}
 
 .ct-action{position: fixed; top: 50%; left: 0px; z-index: 5;display: grid; gap: 10px;}
 .bt-act {
@@ -468,20 +481,35 @@ textarea.form-control { padding: 10px 0; min-height: 100px; }
 
 .des-event{padding: 15px 15px 15px 25px;}
 
+.new-event .title{margin-bottom: 0px;}
+
+.des-event a{font-weight: 600; color: var(--color-blue); font-size:var(--fz-24);}
+.des-event p{font-style: var(--fz-16); color: var(--color00);}
 
 
 
 
-
-
-
-
-
-
-
-
-
-
+body .border-radian-line a:before {
+  content: "";
+  position: absolute;
+  width: calc(100% + 2px);
+  height: calc(100% + 2px);
+  top: calc(1px/ -1);
+  left: calc(1px/ -1);
+  background: linear-gradient(to right, var(--color2) 0%, var(--color2) 100%), linear-gradient(to top, var(--color2) 50%, transparent 50%), linear-gradient(to top, var(--color2) 50%, transparent 50%), linear-gradient(to right, var(--color2) 0%, var(--color2) 100%), linear-gradient(to left, var(--color2) 0%, var(--color2) 100%);
+  background-size: 100% 1px, 1px 200%, 1px 200%, 0% 1px, 0% 1px;
+  background-position: 50% 100%, 0% 0%, 100% 0%, 100% 0%, 0% 0%;
+  background-repeat: no-repeat, no-repeat;
+  transition: transform 0.2s ease-in-out, background-position 0.2s ease-in-out, background-size 0.2s ease-in-out;
+  transform: scaleX(0) rotate(180deg);
+  transition-delay: 0.4s, 0.2s, 0s;
+}
+body .border-radian-line a:hover:before {
+  background-size: 200% 1px, 1px 400%, 1px 400%, 55% 1px, 55% 1px;
+  background-position: 50% 100%, 0% 100%, 100% 100%, 100% 0%, 0% 0%;
+  transform: scaleX(1) rotate(180deg);
+  transition-delay: 0s, 0.2s, 0.4s;
+}
 
 
 
