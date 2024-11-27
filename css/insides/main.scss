@@ -32,6 +32,7 @@
 	--color-scrollbar-thumb: #888;
 	--color-scrollbar-thumb-hover: #555;
   --color-breadcrumb: #D7DBE2;
+  --color-sky-opacity: rgba(0, 174, 239, 0.08);
 	@for $i from 1 through 60 {
 	  --fz-#{$i}: #{$i}px;
 	}
@@ -133,11 +134,17 @@
 			}
 	}
 	}
-
+	.d-flex-center{
+		display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: center;
+        align-content: space-around;
+	}
 	@for $i from 1000 through 2000 {
 		.container-#{$i} {
 			@media (min-width: 1400px) {
-				max-width: #{$i}px;
+				max-width: #{$i}px !important;
 			}
 		}
 	}

@@ -1,5 +1,5 @@
 @import "template.css";
-@import "main.scss";
+@import "main.css";
 
 #about {
   .content {
@@ -23,7 +23,6 @@
         font-size: var(--fz-30);
       }
 
-      line-height: 115%;
       text-align: center;
       letter-spacing: 0.0025em;
       background: var(--bg-radian);
@@ -47,11 +46,12 @@
 
 
     p {
+
       font-family: 'SVN-Gilroy', sans-serif;
       font-style: normal;
       font-weight: 400;
       font-size: var(--fz-16);
-      line-height: 140%;
+
       /* or 22px */
       text-align: justify;
       letter-spacing: 0.005em;
@@ -79,7 +79,7 @@
         font-style: normal;
         font-weight: 400;
         font-size: var(--fz-16);
-        line-height: 140%;
+
         /* or 22px */
         letter-spacing: 0.005em;
         /* Color/White */
@@ -112,7 +112,7 @@
         font-style: normal;
         font-weight: 400;
         font-size: var(--fz-16);
-        line-height: 140%;
+
         letter-spacing: 0.005em;
         /* Color/White */
         color: var(--color-white-fb);
@@ -129,7 +129,6 @@
           font-size: var(--fz-30);
         }
 
-        line-height: 115%;
         /* identical to box height, or 46px */
         text-align: center;
         letter-spacing: 0.0025em;
@@ -284,7 +283,6 @@
           font-style: normal;
           font-weight: 700;
           font-size: var(--fz-40);
-          line-height: 115%;
           /* identical to box height, or 46px */
           text-align: center;
           letter-spacing: 0.0025em;
@@ -408,7 +406,6 @@
           font-size: var(--fz-30);
         }
 
-        line-height: 115%;
         /* or 46px */
         text-align: center;
         letter-spacing: 0.0025em;
@@ -465,7 +462,7 @@
         p {
           font-size: var(--fz-16);
           font-weight: 400;
-          line-height: 140%;
+
           text-align: justify;
           letter-spacing: 0.005em;
           color: var(--colorFB);
@@ -483,6 +480,7 @@
           }
         }
       }
+
       &__name {
         font-size: var(--fz-24);
         display: flex;
@@ -498,6 +496,7 @@
           font-size: var(--fz-16);
           padding: 13.5px 5px;
         }
+
         h3 {
           font-size: var(--fz-20);
           line-height: 130%;
@@ -510,6 +509,7 @@
           flex-grow: 0;
           margin-bottom: 0px;
         }
+
         p {
           font-weight: 400;
           font-size: var(--fz-14);
@@ -527,29 +527,35 @@
       }
     }
   }
+
   &.teacher-page {
     .teacher-page__box {
       /* Color/Light Blue */
       background: var(--color3);
+
       p {
         color: var(--color-white-fb);
       }
     }
+
     .leadership {
       &__members {
         .col-sm-4.col-6 {
           margin-bottom: 14px;
+
           &:nth-last-child(1) {
             margin-bottom: 0;
           }
         }
       }
+
       &__name {
         font-size: var(--fz-24);
 
         @media (max-width: 768px) {
           font-size: var(--fz-16);
         }
+
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -558,6 +564,7 @@
         background: var(--color3);
         border-radius: 0px 0px 16px 16px;
         gap: 0px;
+
         h3 {
           font-size: var(--fz-20);
           line-height: 130%;
@@ -570,6 +577,7 @@
           flex-grow: 0;
           margin-bottom: 0px;
         }
+
         p {
           font-weight: 400;
           font-size: var(--fz-14);
@@ -631,16 +639,20 @@
 
     }
   }
+
   &.career-page {
     h1 {
       font-size: var(--fz-30);
     }
+
     .list-jobs {
       gap: 22.4px 0;
+
       .item-null {
         background-color: #D7DBE2;
         height: 100%;
       }
+
       .leadership {
         &__members {
           .col-sm-4.col-6 {
@@ -651,12 +663,14 @@
             }
           }
         }
+
         &__name {
           font-size: var(--fz-24);
 
           @media (max-width: 768px) {
             font-size: var(--fz-16);
           }
+
           display: flex;
           flex-direction: column;
           justify-content: center;
@@ -679,6 +693,7 @@
             flex-grow: 0;
             margin-bottom: 0px;
           }
+
           p {
             font-weight: 400;
             font-size: var(--fz-14);
@@ -698,14 +713,15 @@
   }
 
   &.accrediation-page {
-    .content{
+    .content {
       position: relative;
-      
+
       >.container {
         position: relative;
         z-index: 3;
       }
-      &.accrediation{
+
+      &.accrediation {
         &::after {
           content: '';
           position: absolute;
@@ -716,10 +732,11 @@
           background: var(--color2);
           opacity: 0.08;
           z-index: 1;
-    
+
         }
       }
     }
+
     .list {
       &-services {
         .item {
@@ -748,7 +765,7 @@
               font-size: var(--fz-16);
               color: var(--color-white-fb);
               font-weight: 400;
-              line-height: 140%;
+
               text-align: center;
               display: -webkit-box;
               /* Sử dụng box model cho các trình duyệt Webkit */
@@ -766,6 +783,7 @@
           }
         }
       }
+
       &-class {
         .item {
           display: flex;
@@ -775,32 +793,206 @@
           background: transparent;
           border-radius: 24px;
           gap: 47px 0;
+
           @media (max-width: 767px) {
             gap: 15px 0;
           }
+
           flex-direction: column;
           align-items: center;
         }
       }
     }
+
     .accrediation-page__url {
-      h2, a {
+
+      h2,
+      a {
         font-size: var(--fz-20);
         color: var(--color-blue);
         line-height: 130%;
       }
+
       a {
         color: var(--color-blue) !important;
         text-decoration: none;
       }
     }
   }
+
+  &.early-years-page {
+    .content {
+      h1 {
+        font-size: var(--fz-30);
+      }
+    }
+
+    .early-years-page__dimensions {
+      position: relative;
+
+      background: var(--color-sky-opacity);
+      // opacity: 0.08;
+
+    }
+
+    .list-goals {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      align-items: center;
+      align-content: space-around;
+      gap: 16px 15px;
+
+
+      &__item {
+        width: 248px;
+        height: 90px;
+        background: var(--color3);
+        border-radius: 86px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        h4 {
+          font-size: var(--fz-24);
+          background: linear-gradient(76.96deg, #FFDC7C 0%, #FEE8AC 14%, #E3EAD1 28%, #9AD7D7 42%, #61C7D8 56%, #9BBCDE 70%, #C9C5DE 86%, #EFB8CE 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          text-fill-color: transparent;
+          display: inline;
+        }
+      }
+    }
+
+    .early-years-page__about {
+      flex-direction: column;
+      gap: 70px 0;
+
+      &__section {
+        
+        h2 {
+          font-weight: 700;
+          font-size: var(--fz-40);
+          letter-spacing: 0.0025em;
+          /* Color/Gradient */
+          background: var(--text-radian);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          text-fill-color: transparent;
+        }
+
+        &--1 {
+          display: flex;
+          flex-direction: column;
+          gap: 25px 0;
+
+        }
+        &--2{
+          display: flex;
+          flex-direction: column;
+          gap: 25px 0;
+        }
+        &--3{
+          display: flex;
+          flex-direction: column;
+          gap: 25px 0;
+        }
+        &--4{
+          display: flex;
+          flex-direction: column;
+          gap: 25px 0;
+          h3{
+            font-weight: 700;
+            font-size: var(--fz-40);
+            letter-spacing: 0.0025em;
+            /* Color/Gradient */
+            background: var(--text-radian);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+          }
+        }
+      }
+      .list-features{
+        flex-direction: row;
+   
+        justify-content: space-between;
+        &__item{
+          display: flex;
+          height: 330px;
+          border: 1px solid var(--color3);
+          border-radius: 25px;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          padding: 0 24px;
+          text-align: center;
+          h3{
+            font-size: var(--fz-16);
+            margin-top: 52px;
+            margin-bottom: 16px;
+          }
+          p{
+            text-align: center;
+            height: 90px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
+        }
+      }
+      .list-learning-goals{
+        flex-direction: row;
+        
+        justify-content: space-between;
+        &__item{
+          display: flex;
+            flex-flow: column;
+            align-items: flex-start;
+            text-align: left;
+          h3{
+            font-size: var(--fz-16);
+            margin-top: 25px;
+            margin-bottom: 10px;
+          }
+          p{
+            text-align: left;
+            color: var(--color-blue);
+            margin-bottom: 0;
+          
+          }
+        }
+      }
+      .box-content{
+        background: var(--color3);
+        border-radius: 24px;
+        color: var(--color-white-fb);
+        padding: 15px 35px;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;    
+        p{
+          color: var(--color-white-fb);
+          font-size: var(--fz-14);  
+          line-height: 130%;
+          letter-spacing: 0.0025em;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
 }
+
 .slider-nor.slider_banner {
   img {
     border-radius: 0 !important;
   }
 }
+
 @keyframes scrollTimeline {
   0% {
     transform: translateX(0);
