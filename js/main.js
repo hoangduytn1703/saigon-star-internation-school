@@ -71,6 +71,31 @@ $(document).ready(function () {
       },
     ],
   });
+  $('.study-tour__slide').slick({
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    infinite: true,
+    dots: false,
+    arrows: true,
+    autoplay: false,
+    autoplaySpeed: 3000,
+    responsive: [
+      {
+        breakpoint: 1280,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 991,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  });
    // Fancybox Initialization
   $('[data-fancybox]').fancybox({
     buttons: ["slideShow", "share", "zoom", "fullScreen", "close"],
@@ -91,4 +116,34 @@ $(document).ready(function () {
     $(this).addClass('active');
   });
   
+
+
+ // Intersection Observer for animations
+ const animatedElements = document.querySelectorAll('.animatedParent');
+
+ const observerOptions = {
+   root: null, // viewport
+   rootMargin: '0px',
+   threshold: 0.1 // 10% of the element is visible
+ };
+
+ const observerCallback = (entries, observer) => {
+  entries.forEach(entry => {
+     if (entry.isIntersecting && !entry.target.classList.contains('animated')) {
+       console.log('Element is in view:', entry.target);
+       entry.target.classList.add('animate', 'animated');
+       observer.unobserve(entry.target); // Stop observing after animation
+     } else {
+       console.log('Element is not in view:', entry.target);
+     }
+   });
+ };
+
+ const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+ animatedElements.forEach(element => {
+   observer.observe(element);
+ });
+
+  // ... existing code ...
 });

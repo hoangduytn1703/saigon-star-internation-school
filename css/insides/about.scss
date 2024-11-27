@@ -473,6 +473,10 @@
   }
 
   &.teacher-page {
+    h2{
+      font-weight: 700;
+      font-size: var(--fz-30);
+    }
     .teacher-page__box {
       /* Color/Light Blue */
       background: var(--color3);
@@ -606,9 +610,9 @@
   }
 
   &.career-page {
-    h1 {
-      font-size: var(--fz-30);
-    }
+    // h1 {
+    //   font-size: var(--fz-30);
+    // }
 
     .list-jobs {
       gap: 22.4px 0;
@@ -689,7 +693,7 @@
         &::after {
           content: '';
           position: absolute;
-          top: 362px;
+          top: 335px;
           left: 0;
           width: 100%;
           height: 640px;

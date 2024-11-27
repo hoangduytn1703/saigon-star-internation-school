@@ -373,6 +373,10 @@
   color: var(--colorFB);
   margin-bottom: 0;
 }
+#about.teacher-page h2 {
+  font-weight: 700;
+  font-size: var(--fz-30);
+}
 #about.teacher-page .teacher-page__box {
   /* Color/Light Blue */
   background: var(--color3);
@@ -473,9 +477,6 @@
     object-fit: cover;
   }
 }
-#about.career-page h1 {
-  font-size: var(--fz-30);
-}
 #about.career-page .list-jobs {
   gap: 22.4px 0;
 }
@@ -540,7 +541,7 @@
 #about.accrediation-page .content.accrediation::after {
   content: "";
   position: absolute;
-  top: 362px;
+  top: 335px;
   left: 0;
   width: 100%;
   height: 640px;
