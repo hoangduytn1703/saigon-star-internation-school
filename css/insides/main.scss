@@ -44,7 +44,48 @@
 		font-style: normal;
 
 	}
+	h1,
+	h3,
+	h5 {
+		font-family: 'SVN-Gilroy', sans-serif;
+		font-style: normal;
+		font-weight: 600;
+		line-height: 120%;
+		letter-spacing: 0.005em;
+	}
 
+	h1 {
+		font-weight: 700;
+		font-size: var(--fz-40);
+		text-transform: lowercase;
+
+		@media (max-width: 768px) {
+			font-size: var(--fz-30);
+		}
+
+		
+		text-align: center;
+		letter-spacing: 0.0025em;
+		background: var(--bg-radian);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+		text-fill-color: transparent;
+		display: inline-block;
+		text-transform: capitalize;
+	}
+
+	h2,
+	h3,
+	h5 {
+		font-size: var(--fz-24);
+		@media (max-width: 768px) {
+			font-size: var(--fz-22);
+		}
+		color: var(--color-blue);
+		line-height: 120%;
+		letter-spacing: 0.005em;
+	}
 	p {
 		/* Font/Body 1 */
 		font-family: 'SVN-Gilroy';
@@ -66,12 +107,15 @@
 	.banner {
 		&__inside {
 			width: 100%;
-			height: 450px;
+			height: 500px;
+			@media (min-width: 2200px) {
+				height: 660px;
+			}
 			@media (max-width: 768px) {
 				height: 250px;
 			}
 			left: 0px;
-			background-position: center !important;
+			background-position: top center !important;
 			background-size: cover !important;
 		}
 	}
@@ -83,7 +127,7 @@
 		background-color: var(--color-breadcrumb);
 		color: var(--color-blue);
 		margin-bottom: 0;
-
+		transition: all ease-in-out .5s;
 		a, p {
 			font-weight: 700;
 			font-size: var(--fz-14);
@@ -98,9 +142,19 @@
 			flex-grow: 0;
 			text-decoration: none;
 			margin-right: 30px;
+			
 			position: relative;
+			text-transform: uppercase !important;
+			transition: color 0.5s ease-in-out;
+
 			&:hover{
-				color: var( --bg-radian);
+				background: var(--bg-radian);
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+				background-clip: text;
+				text-fill-color: transparent;
+				display: inline-block;
+				text-transform: capitalize;
 			}
 			&::after {
 				content: '';
@@ -118,6 +172,7 @@
 			}
 		}
 		p{
+			margin-right: 0 !important;
 			cursor: default;
 			margin-bottom: 0 !important;
 		}

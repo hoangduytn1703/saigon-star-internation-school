@@ -16,14 +16,60 @@ $(document).ready(function(){
               breakpoint: 767,
               settings: {
                   slidesToShow: 1,
+                  slidesToScroll: 1,
+                  dots: false,
               }
           },
           {
               breakpoint: 768,
               settings: {
                   slidesToShow: 2,
+                  slidesToScroll: 2,
+                  dots: false,
               }
           }
       ]
+  });
+
+  $('.timeline-slider').slick({
+    infinite: true,
+    slidesToShow: 6,
+    slidesToScroll: 1,
+    arrows: false,
+    dots: false,
+    autoplay: true,
+    loop: true,
+    speed: 1000,
+    cssEase: 'ease-in-out',
+    responsive: [
+        {
+            breakpoint: 1440,
+            settings: {
+              slidesToShow: 4,
+              slidesToScroll: 4,
+            }
+        },
+        {
+            breakpoint: 991,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 3,
+            }
+          },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+        }
+      },
+      {
+        breakpoint: 640,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        }
+      }
+    ]
   });
 });

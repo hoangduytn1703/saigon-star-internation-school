@@ -4,44 +4,7 @@
 #about {
   .content {
 
-    h1,
-    h3,
-    h5 {
-      font-family: 'SVN-Gilroy', sans-serif;
-      font-style: normal;
-      font-weight: 600;
-      line-height: 120%;
-      letter-spacing: 0.005em;
-    }
-
-    h1 {
-      font-weight: 700;
-      font-size: var(--fz-40);
-      text-transform: lowercase;
-
-      @media (max-width: 768px) {
-        font-size: var(--fz-30);
-      }
-
-      text-align: center;
-      letter-spacing: 0.0025em;
-      background: var(--bg-radian);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      text-fill-color: transparent;
-      display: inline-block;
-      text-transform: capitalize;
-    }
-
-    h2,
-    h3,
-    h5 {
-      font-size: var(--fz-24);
-      color: var(--color-blue);
-      line-height: 120%;
-      letter-spacing: 0.005em;
-    }
+   
 
 
 
@@ -64,7 +27,6 @@
 
     &__box {
       height: 170px;
-
       @media (max-width: 767px) {
         height: auto;
       }
@@ -129,6 +91,7 @@
           font-size: var(--fz-30);
         }
 
+        
         /* identical to box height, or 46px */
         text-align: center;
         letter-spacing: 0.0025em;
@@ -144,15 +107,12 @@
       }
 
       .timeline {
-        display: inline-flex;
-        animation: scrollTimeline 20s linear infinite;
-
+        // display: inline-flex;
+        // animation: scrollTimeline 60s linear infinite;
         &-container {
           position: relative;
-
           white-space: nowrap;
           cursor: grab;
-
           &::before {
             content: '';
             position: absolute;
@@ -163,7 +123,7 @@
             border-style: solid;
             border-width: 10px 0 10px 10px;
             border-color: transparent transparent transparent var(--color-white);
-            transform: translateY(calc(-50% - 5px));
+            transform: translateY(calc(-50% + 1px));
 
           }
 
@@ -177,38 +137,20 @@
             border-style: solid;
             border-width: 10px 0 10px 10px;
             border-color: transparent transparent transparent var(--color-white);
-            transform: translateY(calc(-50% - 5px));
+            transform: translateY(calc(-50% 
+            + 1px));
 
           }
         }
 
         &-wrapper {
-          overflow-x: auto;
+          overflow-x: hidden;
           white-space: nowrap;
           cursor: grab;
           position: relative;
 
-          /* Tùy chỉnh thanh cuộn */
           &::-webkit-scrollbar {
-            height: 12px;
-            /* Chiều cao của thanh cuộn ngang */
-          }
-
-          &::-webkit-scrollbar-track {
-            background: var(--color-scrollbar-track);
-            /* Màu nền của track */
-          }
-
-          &::-webkit-scrollbar-thumb {
-            background: var(--color-scrollbar-thumb);
-            /* Màu của thanh cuộn */
-            border-radius: 6px;
-            /* Bo tròn góc của thanh cuộn */
-          }
-
-          &::-webkit-scrollbar-thumb:hover {
-            background: var(--color-scrollbar-thumb-hover);
-            /* Màu của thanh cuộn khi hover */
+            display: none;
           }
 
         }
@@ -225,7 +167,6 @@
 
         &-item {
           flex: 0 0 auto;
-          min-width: 200px;
           display: flex;
           flex-direction: column;
           align-items: center;
@@ -240,7 +181,10 @@
           align-content: stretch;
           height: 100%;
           min-height: 245px;
-          max-width: 235px;
+          @media (min-width: 1440px) {
+            min-width: 200px;
+            width: 235px;
+          }
 
           ::after {
             content: '';
@@ -283,6 +227,7 @@
           font-style: normal;
           font-weight: 700;
           font-size: var(--fz-40);
+          
           /* identical to box height, or 46px */
           text-align: center;
           letter-spacing: 0.0025em;
@@ -406,6 +351,7 @@
           font-size: var(--fz-30);
         }
 
+        
         /* or 46px */
         text-align: center;
         letter-spacing: 0.0025em;
@@ -415,7 +361,7 @@
         -webkit-text-fill-color: transparent;
         background-clip: text;
         text-fill-color: transparent;
-        display: inline-block;
+        display: inline;
         text-transform: capitalize;
       }
 
@@ -499,6 +445,9 @@
 
         h3 {
           font-size: var(--fz-20);
+          @media (max-width: 768px) {
+            font-size: var(--fz-16);
+          }
           line-height: 130%;
           text-align: center;
           /* Color/White */
@@ -595,6 +544,27 @@
     }
 
     .slider-teacher {
+      &.slick-slider {
+        .slick-prev {
+          width: 36px;
+          height: 36px;
+          border: 1px solid var(--color-blue);
+          
+          &::before{
+            background: url(../../images/icon-arrow-blue-prev.svg) center center no-repeat;
+          }
+
+        }
+        .slick-next {
+          width: 36px;
+          height: 36px;
+          border: 1px solid var(--color-blue);
+         &::before{
+           background: url(../../images/icon-arrow-blue-next.svg) center center no-repeat;
+         }
+
+        }
+      }
       @media (min-width: 768px) {
         &.slick-slider {
           .slick-prev {
@@ -618,7 +588,7 @@
           .slick-dots {
             position: absolute;
             top: -70px;
-            right: 80px;
+            right: 100px;
             left: unset;
             text-align: right;
             height: 26px;
@@ -676,12 +646,11 @@
           justify-content: center;
           align-items: flex-start;
           padding: 13.5px 17px;
-          background: var(--color3);
+          background: var(--color-blue);
           border-radius: 0px 0px 16px 16px;
           gap: 0px;
 
           h3 {
-
             font-size: var(--fz-20);
             line-height: 130%;
             text-align: center;
@@ -986,7 +955,10 @@
     }
   }
 }
-
+.slick-slider .slick-dots li button {
+  color: #D7DBE2;
+  background-image: url(../../images/ico-dot-slide-gray.svg);
+}
 .slider-nor.slider_banner {
   img {
     border-radius: 0 !important;
@@ -995,11 +967,20 @@
 
 @keyframes scrollTimeline {
   0% {
-    transform: translateX(0);
+    transform: translateX(50%);
   }
 
   100% {
-    transform: translateX(calc(-100% - 20px));
+    transform: translateX(calc(-150% + 10px));
     /* Di chuyển toàn bộ chiều rộng của timeline */
+  }
+}
+.timeline-container {
+  .timeline-slider {
+    .timeline-item {
+      text-align: center;
+      padding: 10px;
+      box-sizing: border-box;
+    }
   }
 }
