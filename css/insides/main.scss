@@ -4,340 +4,566 @@
 	font-style: normal;
 	src: url("fonts/SVN-Gilroy.ttf");
 }
+
 @font-face {
 	font-family: "SVN-Gilroy";
 	font-weight: 500;
 	font-style: normal;
 	src: url("fonts/SVN-GilroySemiBold.ttf");
 }
+
 @font-face {
 	font-family: "SVN-Gilroy";
 	font-weight: 600;
 	font-style: normal;
 	src: url("fonts/SVN-GilroyMedium.ttf");
 }
+
 @font-face {
 	font-family: "SVN-Gilroy";
 	font-weight: 700;
 	font-style: normal;
 	src: url("fonts/SVN-GilroyBold.ttf");
 }
+
 :root {
 	--color54: #344054;
 	--color-white: #fff;
 	--color-white-fb: #FBFBFB;
 	--color-neutral-01: #1F242C;
 	--timeline-bg-color: linear-gradient(rgba(0, 82, 152, 0.9), rgba(0, 82, 152, 0.9));
-  --color-scrollbar-track: #f1f1f1;
+	--color-scrollbar-track: #f1f1f1;
 	--color-scrollbar-thumb: #888;
 	--color-scrollbar-thumb-hover: #555;
-  --color-breadcrumb: #D7DBE2;
-  --color-sky-opacity: rgba(0, 174, 239, 0.08);
+	--color-breadcrumb: #D7DBE2;
+	--color-sky-opacity: rgba(0, 174, 239, 0.08);
+
 	@for $i from 1 through 60 {
-	  --fz-#{$i}: #{$i}px;
+		--fz-#{$i}: #{$i}px;
 	}
-  }
-  
-	body {
-		font-family: 'SVN-Gilroy';
-		font-weight: normal;
-		font-style: normal;
+}
 
-	}
-	h1,
-	h3,
-	h5 {
-		font-family: 'SVN-Gilroy', sans-serif;
-		font-style: normal;
-		font-weight: 600;
-		line-height: 120%;
-		letter-spacing: 0.005em;
-	}
+.pull-right {
+	margin-left: auto;
+}
 
-	h1 {
-		font-weight: 700;
-		font-size: var(--fz-40);
-		text-transform: lowercase;
+.pull-left {
+	margin-right: auto;
+}
 
-		@media (max-width: 768px) {
-			font-size: var(--fz-30);
-		}
+.text-bold {
+	font-weight: 700;
+}
 
-		
-		text-align: center;
-		letter-spacing: 0.0025em;
-		background: var(--bg-radian);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-clip: text;
-		text-fill-color: transparent;
-		display: inline-block;
-		text-transform: capitalize;
-	}
-
-	h2,
-	h3,
-	h5 {
-		font-size: var(--fz-24);
-		@media (max-width: 768px) {
-			font-size: var(--fz-22);
-		}
-		color: var(--color-blue);
-		line-height: 120%;
-		letter-spacing: 0.005em;
-	}
-	p {
-		/* Font/Body 1 */
-		font-family: 'SVN-Gilroy';
-		font-style: normal;
-		font-weight: 400;
-		font-size: var(--fz-16);
-		line-height: 140%;
-		/* or 22px */
-		text-align: justify;
-		letter-spacing: 0.005em;
-
-		/* Neutral/Neutral01 */
-		color: var(--color-neutral-01);
-
-
-	}
-
-
-	.banner {
-		&__inside {
-			width: 100%;
-			height: 500px;
-			@media (min-width: 2200px) {
-				height: 660px;
-			}
-			@media (max-width: 768px) {
-				height: 250px;
-			}
-			left: 0px;
-			background-position: top center !important;
-			background-size: cover !important;
-		}
-	}
-
-	.breadcrumb {
-		/* Group 153 */
-		width: 100%;
-		height: 60px;
-		background-color: var(--color-breadcrumb);
-		color: var(--color-blue);
-		margin-bottom: 0;
-		transition: all ease-in-out .5s;
-		a, p {
-			font-weight: 700;
-			font-size: var(--fz-14);
-			line-height: 15px;
-			align-items: center;
-			letter-spacing: 0.0125em;
-			text-transform: uppercase;
-			color: var(--color-blue);
-			/* Inside auto layout */
-			flex: none;
-			order: 0;
-			flex-grow: 0;
-			text-decoration: none;
-			margin-right: 30px;
-			
-			position: relative;
-			text-transform: uppercase !important;
-			transition: color 0.5s ease-in-out;
-
-			&:hover{
-				background: var(--bg-radian);
-				-webkit-background-clip: text;
-				-webkit-text-fill-color: transparent;
-				background-clip: text;
-				text-fill-color: transparent;
-				display: inline-block;
-				text-transform: capitalize;
-			}
-			&::after {
-				content: '';
-				width: 5.76px;
-				height: 10px;
-				background: url('../../images/breadcrumb.svg') no-repeat center center;
-				position: absolute;
-				right: -20px;
-				top: 50%;
-				transform: translateY(-50%);
-			}
-
-			&:last-child::after {
-				display: none;
-			}
-		}
-		p{
-			margin-right: 0 !important;
-			cursor: default;
-			margin-bottom: 0 !important;
-		}
-	}
-	.btn{
-		a{
-			text-decoration: none;
-		}
-		&:hover{
-			background: var(--bg-radian) !important;transition: var(--d-transition); 
-      color: var(--color-blue) !important;
-			a{
-				color: var(--color-blue) !important;
-			}
-	}
-	}
-	.d-flex-center{
+@for $i from 1 through 150 {
+	.gap-x-#{$i} {
 		display: flex;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-        align-items: center;
-        align-content: space-around;
+		flex-wrap: wrap;
+		justify-content: flex-start;
+		align-items: center;
+		align-content: space-around;
+		flex-direction: row;
+		gap: 0 #{$i}px;
 	}
-	@for $i from 1000 through 2000 {
-		.container-#{$i} {
-			@media (min-width: 1400px) {
-				max-width: #{$i}px !important;
-			}
+
+	.gap-y-#{$i} {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: flex-start;
+		align-items: center;
+		align-content: space-around;
+		flex-direction: column;
+		gap: #{$i}px 0;
+	}
+
+	.gap-#{$i} {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: flex-start;
+		align-items: center;
+		align-content: space-around;
+		gap: #{$i}px;
+	}
+
+	.gap-x-sm-#{$i} {
+		@media (max-width: 576px) {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: flex-start;
+			align-items: center;
+			align-content: space-around;
+			gap: 0 #{$i}px;
 		}
 	}
 
-	@each $direction in (t, r, b, l, x, y) {
-		@for $i from 0 through 125 {
-			.m#{$direction}-#{$i} {
-				@if $direction == 'x' {
+	.gap-y-sm-#{$i} {
+		@media (max-width: 576px) {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: flex-start;
+			align-items: center;
+			align-content: space-around;
+			gap: #{$i}px 0;
+		}
+	}
+
+	.gap-sm-#{$i} {
+		@media (max-width: 576px) {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: flex-start;
+			align-items: center;
+			align-content: space-around;
+			gap: #{$i}px;
+		}
+	}
+
+	.gap-x-md-#{$i} {
+		@media (max-width: 768px) {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: flex-start;
+			align-items: center;
+			align-content: space-around;
+			gap: 0 #{$i}px;
+		}
+	}
+
+	.gap-y-md-#{$i} {
+		@media (max-width: 768px) {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: flex-start;
+			align-items: center;
+			align-content: space-around;
+			gap: #{$i}px 0;
+		}
+	}
+
+	.gap-md-#{$i} {
+		@media (max-width: 768px) {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: flex-start;
+			align-items: center;
+			align-content: space-around;
+			gap: #{$i}px;
+		}
+	}
+
+	.gap-x-lg-#{$i} {
+		@media (max-width: 992px) {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: flex-start;
+			align-items: center;
+			align-content: space-around;
+			gap: 0 #{$i}px;
+		}
+	}
+
+	.gap-y-lg-#{$i} {
+		@media (max-width: 992px) {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: flex-start;
+			align-items: center;
+			align-content: space-around;
+			gap: #{$i}px 0;
+		}
+	}
+
+	.gap-lg-#{$i} {
+		@media (max-width: 992px) {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: flex-start;
+			align-items: center;
+			align-content: space-around;
+			gap: #{$i}px;
+		}
+	}
+}
+
+body {
+	font-family: 'SVN-Gilroy';
+	font-weight: normal;
+	font-style: normal;
+
+}
+
+h1,
+h3,
+h5 {
+	font-family: 'SVN-Gilroy', sans-serif;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 120%;
+	letter-spacing: 0.005em;
+}
+
+h1 {
+	font-weight: 700;
+	font-size: var(--fz-40);
+	text-transform: lowercase;
+
+	@media (max-width: 768px) {
+		font-size: var(--fz-30);
+	}
+
+
+	text-align: center;
+	letter-spacing: 0.0025em;
+	background: var(--bg-radian);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+	text-fill-color: transparent;
+	display: inline-block;
+	text-transform: capitalize;
+}
+
+h2,
+h3,
+h5 {
+	font-size: var(--fz-24);
+
+	@media (max-width: 768px) {
+		font-size: var(--fz-22);
+	}
+
+	color: var(--color-blue);
+
+	letter-spacing: 0.005em;
+}
+
+p {
+	/* Font/Body 1 */
+	font-family: 'SVN-Gilroy';
+	font-style: normal;
+	font-weight: 400;
+	font-size: var(--fz-16);
+
+	/* or 22px */
+	text-align: justify;
+	letter-spacing: 0.005em;
+
+	/* Neutral/Neutral01 */
+	color: var(--color-neutral-01);
+
+
+}
+
+h2.title {
+	font-weight: 700;
+	font-size: 30px;
+}
+
+h3.title {
+	font-weight: 700;
+	font-size: 30px;
+	@media screen and (max-width: 767px) {
+		font-size: var(--fz-24);
+	}
+	margin-bottom: 0px;
+}
+
+.banner {
+	&__inside {
+		width: 100%;
+		height: 500px;
+
+		@media (min-width: 2200px) {
+			height: 660px;
+		}
+
+		@media (max-width: 768px) {
+			height: 250px;
+		}
+
+		left: 0px;
+		background-position: top center !important;
+		background-size: cover !important;
+	}
+}
+
+.breadcrumb {
+	/* Group 153 */
+	width: 100%;
+	height: 60px;
+	background-color: var(--color-breadcrumb);
+	color: var(--color-blue);
+	margin-bottom: 0;
+	transition: all ease-in-out .5s;
+
+	a,
+	p {
+		font-weight: 700;
+		font-size: var(--fz-14);
+		line-height: 15px;
+		align-items: center;
+		letter-spacing: 0.0125em;
+		text-transform: uppercase;
+		color: var(--color-blue);
+		/* Inside auto layout */
+		flex: none;
+		order: 0;
+		flex-grow: 0;
+		text-decoration: none;
+		margin-right: 30px;
+
+		position: relative;
+		text-transform: uppercase !important;
+		transition: color 0.5s ease-in-out;
+
+		&:hover {
+			background: var(--bg-radian);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			background-clip: text;
+			text-fill-color: transparent;
+			display: inline-block;
+			text-transform: capitalize;
+		}
+
+		&::after {
+			content: '';
+			width: 5.76px;
+			height: 10px;
+			background: url('../../images/breadcrumb.svg') no-repeat center center;
+			position: absolute;
+			right: -20px;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+
+		&:last-child::after {
+			display: none;
+		}
+	}
+
+	p {
+		margin-right: 0 !important;
+		cursor: default;
+		margin-bottom: 0 !important;
+	}
+}
+
+.btn {
+	a {
+		text-decoration: none;
+	}
+
+	&:hover {
+		background: var(--bg-radian) !important;
+		transition: var(--d-transition);
+		color: var(--color-blue) !important;
+
+		a {
+			color: var(--color-blue) !important;
+		}
+	}
+}
+
+.d-flex-center {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-items: center;
+	align-content: space-around;
+}
+
+@for $i from 500 through 2000 {
+	.container-#{$i} {
+		@media (min-width: 1200px) {
+			max-width: #{$i}px !important;
+		}
+	}
+}
+
+@each $direction in (t, r, b, l, x, y) {
+	@for $i from 0 through 125 {
+		.m#{$direction}-#{$i} {
+			@if $direction =='x' {
+				margin-left: #{$i}px !important;
+				margin-right: #{$i}px !important;
+			}
+
+			@else if $direction =='y' {
+				margin-top: #{$i}px !important;
+				margin-bottom: #{$i}px !important;
+			}
+
+			@else {
+				margin-#{if($direction == 't', 'top', if($direction == 'r', 'right', if($direction == 'b', 'bottom', 'left')))}: #{$i}px !important;
+			}
+		}
+
+		.p#{$direction}-#{$i} {
+			@if $direction =='x' {
+				padding-left: #{$i}px !important;
+				padding-right: #{$i}px !important;
+			}
+
+			@else if $direction =='y' {
+				padding-top: #{$i}px !important;
+				padding-bottom: #{$i}px !important;
+			}
+
+			@else {
+				padding-#{if($direction == 't', 'top', if($direction == 'r', 'right', if($direction == 'b', 'bottom', 'left')))}: #{$i}px !important;
+			}
+		}
+
+		// Responsive for lg, md, sm, xs
+		@media (min-width: 1200px) {
+
+			// lg
+			.m#{$direction}-lg-#{$i} {
+				@if $direction =='x' {
 					margin-left: #{$i}px !important;
 					margin-right: #{$i}px !important;
-				} @else if $direction == 'y' {
+				}
+
+				@else if $direction =='y' {
 					margin-top: #{$i}px !important;
 					margin-bottom: #{$i}px !important;
-				} @else {
+				}
+
+				@else {
 					margin-#{if($direction == 't', 'top', if($direction == 'r', 'right', if($direction == 'b', 'bottom', 'left')))}: #{$i}px !important;
 				}
 			}
 
-			.p#{$direction}-#{$i} {
-				@if $direction == 'x' {
+			.p#{$direction}-lg-#{$i} {
+				@if $direction =='x' {
 					padding-left: #{$i}px !important;
 					padding-right: #{$i}px !important;
-				} @else if $direction == 'y' {
+				}
+
+				@else if $direction =='y' {
 					padding-top: #{$i}px !important;
 					padding-bottom: #{$i}px !important;
-				} @else {
+				}
+
+				@else {
 					padding-#{if($direction == 't', 'top', if($direction == 'r', 'right', if($direction == 'b', 'bottom', 'left')))}: #{$i}px !important;
 				}
 			}
+		}
 
-			// Responsive for lg, md, sm, xs
-			@media (min-width: 1200px) { // lg
-				.m#{$direction}-lg-#{$i} {
-					@if $direction == 'x' {
-						margin-left: #{$i}px !important;
-						margin-right: #{$i}px !important;
-					} @else if $direction == 'y' {
-						margin-top: #{$i}px !important;
-						margin-bottom: #{$i}px !important;
-					} @else {
-						margin-#{if($direction == 't', 'top', if($direction == 'r', 'right', if($direction == 'b', 'bottom', 'left')))}: #{$i}px !important;
-					}
+		@media (min-width: 992px) and (max-width: 1199.98px) {
+
+			// md
+			.m#{$direction}-md-#{$i} {
+				@if $direction =='x' {
+					margin-left: #{$i}px !important;
+					margin-right: #{$i}px !important;
 				}
 
-				.p#{$direction}-lg-#{$i} {
-					@if $direction == 'x' {
-						padding-left: #{$i}px !important;
-						padding-right: #{$i}px !important;
-					} @else if $direction == 'y' {
-						padding-top: #{$i}px !important;
-						padding-bottom: #{$i}px !important;
-					} @else {
-						padding-#{if($direction == 't', 'top', if($direction == 'r', 'right', if($direction == 'b', 'bottom', 'left')))}: #{$i}px !important;
-					}
+				@else if $direction =='y' {
+					margin-top: #{$i}px !important;
+					margin-bottom: #{$i}px !important;
+				}
+
+				@else {
+					margin-#{if($direction == 't', 'top', if($direction == 'r', 'right', if($direction == 'b', 'bottom', 'left')))}: #{$i}px !important;
 				}
 			}
 
-			@media (min-width: 992px) and (max-width: 1199.98px) { // md
-				.m#{$direction}-md-#{$i} {
-					@if $direction == 'x' {
-						margin-left: #{$i}px !important;
-						margin-right: #{$i}px !important;
-					} @else if $direction == 'y' {
-						margin-top: #{$i}px !important;
-						margin-bottom: #{$i}px !important;
-					} @else {
-						margin-#{if($direction == 't', 'top', if($direction == 'r', 'right', if($direction == 'b', 'bottom', 'left')))}: #{$i}px !important;
-					}
+			.p#{$direction}-md-#{$i} {
+				@if $direction =='x' {
+					padding-left: #{$i}px !important;
+					padding-right: #{$i}px !important;
 				}
 
-				.p#{$direction}-md-#{$i} {
-					@if $direction == 'x' {
-						padding-left: #{$i}px !important;
-						padding-right: #{$i}px !important;
-					} @else if $direction == 'y' {
-						padding-top: #{$i}px !important;
-						padding-bottom: #{$i}px !important;
-					} @else {
-						padding-#{if($direction == 't', 'top', if($direction == 'r', 'right', if($direction == 'b', 'bottom', 'left')))}: #{$i}px !important;
-					}
+				@else if $direction =='y' {
+					padding-top: #{$i}px !important;
+					padding-bottom: #{$i}px !important;
+				}
+
+				@else {
+					padding-#{if($direction == 't', 'top', if($direction == 'r', 'right', if($direction == 'b', 'bottom', 'left')))}: #{$i}px !important;
+				}
+			}
+		}
+
+		@media (min-width: 768px) and (max-width: 991.98px) {
+
+			// sm
+			.m#{$direction}-sm-#{$i} {
+				@if $direction =='x' {
+					margin-left: #{$i}px !important;
+					margin-right: #{$i}px !important;
+				}
+
+				@else if $direction =='y' {
+					margin-top: #{$i}px !important;
+					margin-bottom: #{$i}px !important;
+				}
+
+				@else {
+					margin-#{if($direction == 't', 'top', if($direction == 'r', 'right', if($direction == 'b', 'bottom', 'left')))}: #{$i}px !important;
 				}
 			}
 
-			@media (min-width: 768px) and (max-width: 991.98px) { // sm
-				.m#{$direction}-sm-#{$i} {
-					@if $direction == 'x' {
-						margin-left: #{$i}px !important;
-						margin-right: #{$i}px !important;
-					} @else if $direction == 'y' {
-						margin-top: #{$i}px !important;
-						margin-bottom: #{$i}px !important;
-					} @else {
-						margin-#{if($direction == 't', 'top', if($direction == 'r', 'right', if($direction == 'b', 'bottom', 'left')))}: #{$i}px !important;
-					}
+			.p#{$direction}-sm-#{$i} {
+				@if $direction =='x' {
+					padding-left: #{$i}px !important;
+					padding-right: #{$i}px !important;
 				}
 
-				.p#{$direction}-sm-#{$i} {
-					@if $direction == 'x' {
-						padding-left: #{$i}px !important;
-						padding-right: #{$i}px !important;
-					} @else if $direction == 'y' {
-						padding-top: #{$i}px !important;
-						padding-bottom: #{$i}px !important;
-					} @else {
-						padding-#{if($direction == 't', 'top', if($direction == 'r', 'right', if($direction == 'b', 'bottom', 'left')))}: #{$i}px !important;
-					}
+				@else if $direction =='y' {
+					padding-top: #{$i}px !important;
+					padding-bottom: #{$i}px !important;
+				}
+
+				@else {
+					padding-#{if($direction == 't', 'top', if($direction == 'r', 'right', if($direction == 'b', 'bottom', 'left')))}: #{$i}px !important;
+				}
+			}
+		}
+
+		@media (max-width: 767.98px) {
+
+			// xs
+			.m#{$direction}-xs-#{$i} {
+				@if $direction =='x' {
+					margin-left: #{$i}px !important;
+					margin-right: #{$i}px !important;
+				}
+
+				@else if $direction =='y' {
+					margin-top: #{$i}px !important;
+					margin-bottom: #{$i}px !important;
+				}
+
+				@else {
+					margin-#{if($direction == 't', 'top', if($direction == 'r', 'right', if($direction == 'b', 'bottom', 'left')))}: #{$i}px !important;
 				}
 			}
 
-			@media (max-width: 767.98px) { // xs
-				.m#{$direction}-xs-#{$i} {
-					@if $direction == 'x' {
-						margin-left: #{$i}px !important;
-						margin-right: #{$i}px !important;
-					} @else if $direction == 'y' {
-						margin-top: #{$i}px !important;
-						margin-bottom: #{$i}px !important;
-					} @else {
-						margin-#{if($direction == 't', 'top', if($direction == 'r', 'right', if($direction == 'b', 'bottom', 'left')))}: #{$i}px !important;
-					}
+			.p#{$direction}-xs-#{$i} {
+				@if $direction =='x' {
+					padding-left: #{$i}px !important;
+					padding-right: #{$i}px !important;
 				}
 
-				.p#{$direction}-xs-#{$i} {
-					@if $direction == 'x' {
-						padding-left: #{$i}px !important;
-						padding-right: #{$i}px !important;
-					} @else if $direction == 'y' {
-						padding-top: #{$i}px !important;
-						padding-bottom: #{$i}px !important;
-					} @else {
-						padding-#{if($direction == 't', 'top', if($direction == 'r', 'right', if($direction == 'b', 'bottom', 'left')))}: #{$i}px !important;
-					}
+				@else if $direction =='y' {
+					padding-top: #{$i}px !important;
+					padding-bottom: #{$i}px !important;
+				}
+
+				@else {
+					padding-#{if($direction == 't', 'top', if($direction == 'r', 'right', if($direction == 'b', 'bottom', 'left')))}: #{$i}px !important;
 				}
 			}
 		}
 	}
-	@for $i from 1 through 45 {
-		.br-#{$i} {
-			border-radius: #{$i}px;
-		}
+}
+
+@for $i from 1 through 45 {
+	.br-#{$i} {
+		border-radius: #{$i}px;
 	}
+}
