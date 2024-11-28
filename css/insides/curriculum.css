@@ -685,22 +685,6 @@
     display: none;
   }
 }
-#curriculum .text-gradient {
-  font-weight: 700;
-  font-size: var(--fz-40);
-  letter-spacing: 0.0025em;
-  background: var(--text-radian);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-fill-color: transparent;
-  display: inline-block;
-}
-@media screen and (max-width: 767px) {
-  #curriculum .text-gradient {
-    font-size: var(--fz-30);
-  }
-}
 #curriculum .primary-program {
   text-align: center;
   margin-top: 30px;

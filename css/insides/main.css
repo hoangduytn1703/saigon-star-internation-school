@@ -31,7 +31,7 @@
   --color-scrollbar-track: #f1f1f1;
   --color-scrollbar-thumb: #888;
   --color-scrollbar-thumb-hover: #555;
-  --color-breadcrumb: #D7DBE2;
+  --color-breadcrumb: rgba(215 219 226 / 30%);
   --color-sky-opacity: rgba(0, 174, 239, 0.08);
   --d-transition: all 0.5s cubic-bezier(0.65, 0, 0.35, 1);
   --d-transition2: all 0.8s cubic-bezier(0.65, 0, 0.35, 1);
@@ -324,6 +324,23 @@
 
 .fz-40 {
   font-size: 40px !important;
+}
+
+.text-gradient {
+  font-weight: 700;
+  font-size: var(--fz-40);
+  letter-spacing: 0.0025em;
+  background: var(--text-radian);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  display: inline-block;
+}
+@media screen and (max-width: 767px) {
+  .text-gradient {
+    font-size: var(--fz-30);
+  }
 }
 
 @media screen and (max-width: 767px) {

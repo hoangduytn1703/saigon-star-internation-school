@@ -1,0 +1,167 @@
+@import "template.css";
+@import "main.css";
+#admission.admission-page .admission-page__admission-policy__content p {
+  color: var(--color54);
+  margin-bottom: 0;
+}
+#admission.admission-page .admission-page__admission-policy__content--1 {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  gap: 28px 0;
+}
+#admission.admission-page .admission-page__admission-policy__content--2 {
+  position: relative;
+}
+#admission.admission-page .admission-page__admission-policy__content--2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--color2);
+  opacity: 7.5%;
+  z-index: -1;
+}
+#admission.admission-page .admission-page__admission-policy__content--2 .container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  gap: 8px 0;
+}
+#admission.admission-page .admission-page__admission-policy .enrolment-details {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0 36px;
+}
+@media (max-width: 767px) {
+  #admission.admission-page .admission-page__admission-policy .enrolment-details {
+    flex-direction: column;
+  }
+}
+#admission.admission-page .admission-page__admission-policy .enrolment-details__left, #admission.admission-page .admission-page__admission-policy .enrolment-details__right {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  gap: 20px 0;
+  width: 50%;
+}
+@media (max-width: 767px) {
+  #admission.admission-page .admission-page__admission-policy .enrolment-details__left, #admission.admission-page .admission-page__admission-policy .enrolment-details__right {
+    width: 100%;
+  }
+}
+#admission.admission-page .admission-page__admission-policy .enrolment-details__item {
+  display: flex;
+  justify-content: unset;
+  flex-direction: row;
+  gap: 0 29px;
+  flex-wrap: nowrap;
+  width: 100%;
+  position: relative;
+  padding-top: 20px;
+}
+#admission.admission-page .admission-page__admission-policy .enrolment-details__item:not(:first-child)::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: url(../../images/line-gradient.svg) no-repeat center center/cover;
+  z-index: -1;
+}
+#admission.admission-page .admission-page__admission-policy .enrolment-details__item h3 {
+  min-width: 43px;
+}
+#admission.admission-page .admission-page__admission-policy .enrolment-details .content-list ul {
+  padding-left: 21px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  text-align: left;
+}
+#admission.admission-page .admission-page__admission-policy .enrolment-details .content-list ul li {
+  color: var(--color54);
+  font-family: "SVN-Gilroy";
+  font-style: normal;
+  font-weight: 400;
+  font-size: var(--fz-16);
+  text-align: justify;
+  letter-spacing: 0.005em;
+  color: var(--color-neutral-01);
+}
+#admission.admission-page .admission-page__tuition-fee {
+  position: relative;
+}
+#admission.admission-page .admission-page__tuition-fee::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--color2);
+  opacity: 7.5%;
+  z-index: -1;
+}
+#admission.admission-page .admission-page__application .container {
+  display: flex;
+  gap: 33px 0;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+#admission.admission-page .admission-page__application .list-features {
+  flex-direction: row;
+  justify-content: space-between;
+}
+#admission.admission-page .admission-page__application .list-features__item {
+  display: flex;
+  height: 400px;
+  border: 1px solid var(--color3);
+  border-radius: 25px;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 47px 28px 52px 28px;
+  text-align: center;
+  gap: 45px 0;
+}
+@media screen and (max-width: 767px) {
+  #admission.admission-page .admission-page__application .list-features__item {
+    height: 320px;
+  }
+}
+#admission.admission-page .admission-page__application .list-features__item h3 {
+  font-size: var(--fz-16);
+  color: var(--color-white-fb);
+  font-weight: 600;
+  font-style: normal;
+}
+#admission.admission-page .admission-page__application .list-features__item p {
+  text-align: center;
+  color: var(--color-white-fb);
+}
+#admission.admission-page .admission-page__application .list-features__item--1 {
+  background-color: var(--color-blue);
+}
+#admission.admission-page .admission-page__application .list-features__item--2 {
+  background-color: var(--color3);
+}
+#admission.admission-page .admission-page__application .list-features__item--3 {
+  background-color: var(--color2);
+}
+
+/*# sourceMappingURL=admission.css.map */
