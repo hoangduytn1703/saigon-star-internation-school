@@ -369,7 +369,7 @@
   justify-content: center;
   align-items: flex-start;
   padding: 13.5px 17px;
-  background: var(--color3);
+  background: var(--color-blue);
   border-radius: 0px 0px 16px 16px;
   gap: 0px;
 }
@@ -380,7 +380,6 @@
 }
 #about.teacher-page .leadership__name h3 {
   font-size: var(--fz-20);
-  line-height: 130%;
   text-align: center;
   color: var(--colorFB);
   flex: none;
@@ -448,12 +447,31 @@
     object-fit: cover;
   }
 }
+#about.career-page .no-job {
+  position: relative;
+}
+#about.career-page .no-job img {
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+#about.career-page .no-job::after {
+  content: "";
+  background: url("../../images/icon-image-null.svg");
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+  width: 58px;
+  height: 58px;
+}
+@media screen and (max-width: 575px) {
+  #about.career-page .no-job::after {
+    top: 40%;
+  }
+}
 #about.career-page .list-jobs {
   gap: 22.4px 0;
-}
-#about.career-page .list-jobs .item-null {
-  background-color: #D7DBE2;
-  height: 100%;
 }
 #about.career-page .list-jobs .leadership__members .col-sm-4.col-6 {
   margin-bottom: 14px;

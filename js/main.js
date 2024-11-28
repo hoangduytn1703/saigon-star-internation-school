@@ -12,7 +12,7 @@ $(document).ready(function () {
     dots: true,
     responsive: [
       {
-        breakpoint: 767,
+        breakpoint: 640,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
