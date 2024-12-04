@@ -1,0 +1,286 @@
+@charset "UTF-8";
+@import "template.css";
+@import "main.css";
+#school-life p {
+  color: var(--color54);
+}
+#school-life h4.name {
+  color: var(--color3);
+  font-size: var(--fz-24);
+}
+#school-life.safeguards-page .box-content {
+  background: var(--color3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+#school-life.safeguards-page .box-content p {
+  color: var(--color-white-fb);
+  text-align: center;
+  font-style: normal;
+  font-weight: 600;
+}
+#school-life.safeguards-page .study-tour__slide {
+  display: flex;
+}
+#school-life.safeguards-page .study-tour__slide .slide-item .content {
+  display: flex;
+  flex-direction: column;
+  background-color: #ECF9FE;
+  padding: 25px 25px;
+  justify-content: flex-start;
+  align-items: baseline;
+  text-align: left;
+  border-bottom-left-radius: 24px;
+  border-bottom-right-radius: 24px;
+}
+#school-life.safeguards-page .study-tour__slide .slide-item .content h4.title {
+  font-style: normal;
+  font-weight: 700;
+  font-size: var(--fz-30);
+  color: var(--color-blue);
+  margin-bottom: 0;
+  text-align: left;
+}
+@media screen and (max-width: 991px) {
+  #school-life.safeguards-page .study-tour__slide .slide-item .content h4.title {
+    font-size: var(--fz-20);
+  }
+}
+#school-life.safeguards-page .study-tour__slide .slide-item .content .info-list {
+  list-style: none;
+  /* Xóa dấu chấm */
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+#school-life.safeguards-page .study-tour__slide .slide-item .content .info-list li {
+  display: flex;
+  margin-bottom: 10px;
+  font-size: var(--fz-18);
+}
+@media screen and (max-width: 991px) {
+  #school-life.safeguards-page .study-tour__slide .slide-item .content .info-list li {
+    font-size: var(--fz-16);
+  }
+}
+#school-life.safeguards-page .study-tour__slide .slide-item .content .info-list .label {
+  font-weight: 700;
+  flex: 0 0 150px;
+  color: var(--color54);
+}
+#school-life.safeguards-page .study-tour__slide .slide-item .content .info-list .value {
+  flex: none;
+  /* Giá trị sẽ chiếm phần còn lại */
+  text-align: left;
+  /* Canh trái giá trị */
+}
+@media screen and (max-width: 991px) {
+  #school-life.safeguards-page .study-tour__slide .slide-item .content .info-list .value {
+    flex: 1;
+  }
+}
+#school-life.safeguards-page .study-tour__slide.slick-slider .slick-prev {
+  background-color: var(--color2);
+}
+@media screen and (min-width: 1281px) {
+  #school-life.safeguards-page .study-tour__slide.slick-slider .slick-prev {
+    left: -60px;
+  }
+}
+#school-life.safeguards-page .study-tour__slide.slick-slider .slick-prev::before {
+  background: url(../../images/ico-prev-w.svg) center center no-repeat;
+}
+#school-life.safeguards-page .study-tour__slide.slick-slider .slick-next {
+  background-color: var(--color2);
+}
+@media screen and (min-width: 1281px) {
+  #school-life.safeguards-page .study-tour__slide.slick-slider .slick-next {
+    right: -60px;
+  }
+}
+#school-life.safeguards-page .study-tour__slide.slick-slider .slick-next::before {
+  background: url(../../images/ico-next-w.svg) center center no-repeat;
+}
+#school-life .how-to-keep {
+  text-align: center;
+  margin-top: 30px;
+  position: relative;
+}
+#school-life .how-to-keep::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--color2);
+  opacity: 0.08;
+  z-index: -1;
+}
+#school-life .how-to-keep__list {
+  gap: 16px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: space-between;
+}
+@media screen and (max-width: 991px) {
+  #school-life .how-to-keep__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 767px) {
+  #school-life .how-to-keep__list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+#school-life .how-to-keep__item {
+  background: var(--color3);
+  width: 100%;
+  color: var(--color-white-fb);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
+  border-radius: 16px;
+  gap: 25px 0;
+  align-content: flex-start;
+}
+@media screen and (min-width: 992px) {
+  #school-life .how-to-keep__item {
+    aspect-ratio: 1/1;
+  }
+}
+@media screen and (max-width: 991px) {
+  #school-life .how-to-keep__item {
+    min-height: 170px;
+  }
+}
+#school-life .how-to-keep__item p {
+  color: var(--color-white-fb) !important;
+  text-align: center;
+  margin-bottom: 0;
+}
+#school-life .how-to-keep__item--empty {
+  opacity: 0.2;
+}
+#school-life .how-to-keep__item--empty > * {
+  display: none;
+}
+@media screen and (max-width: 991px) {
+  #school-life.student-support-service-page .stdudent-content__2 .content {
+    order: 2;
+  }
+  #school-life.student-support-service-page .stdudent-content__2 .img {
+    order: 1;
+  }
+}
+#school-life.gallery-page .list-gallery .grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+#school-life.gallery-page .list-gallery .element-item {
+  margin-bottom: 16px;
+}
+#school-life.gallery-page .list-gallery .element-item img {
+  width: 100%;
+  border-radius: 8px;
+}
+#school-life.gallery-page .list-gallery .button-group {
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (max-width: 991px) {
+  #school-life.gallery-page .list-gallery .button-group {
+    justify-content: space-around;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: stretch;
+  }
+}
+#school-life.gallery-page .list-gallery .button-group button {
+  margin-right: 10px;
+  border: none;
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
+  display: grid;
+  align-items: center;
+  padding: 1px;
+  border-radius: 12px;
+  position: relative;
+  width: 248px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+@media screen and (max-width: 991px) {
+  #school-life.gallery-page .list-gallery .button-group button {
+    margin-bottom: 10px;
+    width: 45%;
+  }
+}
+#school-life.gallery-page .list-gallery .button-group button span {
+  background: #fff;
+  border-radius: 12px;
+  padding: 18px;
+  color: var(--color-blue);
+  font-weight: 500;
+  transition: all 0.3s ease;
+  font-size: var(--fz-20);
+}
+@media screen and (max-width: 1280px) {
+  #school-life.gallery-page .list-gallery .button-group button span {
+    padding: 16px;
+  }
+}
+@media screen and (max-width: 991px) {
+  #school-life.gallery-page .list-gallery .button-group button span {
+    padding: 18px;
+    font-size: var(--fz-16);
+  }
+}
+#school-life.gallery-page .list-gallery .button-group button::after {
+  content: "";
+  border-radius: 12px;
+  background: var(--bg-radian);
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  background-size: 400%;
+  z-index: -1;
+  width: calc(100% + 2px);
+  height: calc(100% + 2px);
+  animation: glowing 10s linear infinite;
+  transition: opacity 0.9s ease-in-out;
+}
+#school-life.gallery-page .list-gallery .button-group button.is-checked span, #school-life.gallery-page .list-gallery .button-group button:hover span {
+  background: var(--color-blue);
+  color: var(--color-white-fb);
+}
+#school-life.gallery-page .list-gallery .button-group button.is-checked::after, #school-life.gallery-page .list-gallery .button-group button:hover::after {
+  display: none;
+}
+#school-life.student-council-page .info img {
+  border-radius: 16px;
+}
+#school-life.student-council-page .info span {
+  color: var(--color3);
+  font-size: var(--fz-20);
+  padding: 0 10px;
+  font-weight: 600;
+}
+#school-life.student-council-page .info h4 {
+  color: var(--color3);
+  font-size: var(--fz-20);
+  margin-bottom: 0;
+}
+#school-life.student-council-page .info h4.year {
+  color: var(--color2);
+}
+
+/*# sourceMappingURL=safeguards.css.map */
